@@ -1,0 +1,16 @@
+<h1>Formulas#show</h1>
+<p>Find me in app/views/formulas/show.html.erb</p>
+
+<div class="row">
+  <aside class="col-md-4">
+    <section class="user_info">
+      <h3>ID:<%= @formula.id %></h3>
+      <h3>機種名:<%= @formula.model_id %></h3>
+      <h3>基準:<%= @formula.criteria %></h3>
+      <h3>Big:<%= @formula.big %></h3>
+      <h3>Reg:<%= @formula.reg %></h3>
+      <h3>回転数:<%= @formula.roll %></h3>
+    </section>
+  </aside>
+</div>
+<%= button_to "戻る", formulas_index_path ,method: :get %>

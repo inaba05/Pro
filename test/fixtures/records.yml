@@ -1,0 +1,25 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  machine_id: 1
+  date: 2016-03-10
+  big: 1
+  reg: 1
+  art: 1
+  roll: 1
+  final_roll: 1
+  dry: 1
+  result: 1
+  sweet: 1
+
+two:
+  machine_id: 1
+  date: 2016-03-10
+  big: 1
+  reg: 1
+  art: 1
+  roll: 1
+  final_roll: 1
+  dry: 1
+  result: 1
+  sweet: 1

@@ -1,0 +1,31 @@
+<h1>Records#edit</h1>
+<p>Find me in app/views/records/edit.html.erb</p>
+<div class="row">
+  <div class="col-md-6 col-md-offset-3">
+    <%= form_for(@record) do |f| %>
+      <%= f.label :machine_id %>
+      <%= f.text_field :machine_id, class: 'form-control' %>
+      <br>
+      <%= f.label :date %>
+      <%= f.date_field :date, class: 'form-control' %>
+      <br>
+      <%= f.label :big %>
+      <%= f.number_field :big, class: 'form-control' %>
+      <br>
+      <%= f.label :reg %>
+      <%= f.number_field :reg, class: 'form-control' %>
+      <br>
+      <%= f.label :art %>
+      <%= f.number_field :art, class: 'form-control' %>
+      <br>
+      <%= f.label :roll %>
+      <%= f.number_field :roll, class: 'form-control' %>
+      <br>
+      <%= f.label :final_roll %>
+      <%= f.number_field :final_roll, class: 'form-control' %>
+      <br>
+      <%= f.submit "変更", class: "btn btn-primary" %>
+    <% end %>
+</div>
+
+<%= button_to "戻る", records_index_path ,method: :get %>

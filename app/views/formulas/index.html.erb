@@ -1,0 +1,27 @@
+<h1>Formulas#index</h1>
+
+<table>
+  <tr>
+    <th width="20">No</th>
+    <th width="200">機種名</th>
+    <th width="200">基準</th>
+    <th width="100">Big</th>
+    <th width="100">Reg</th>
+    <th width="100">回転数</th>
+  </tr>
+  <% i = 1 %>
+  <% @formula.each do |m| -%>
+  <tr>
+    <td><a href="/formulas/<%= m.id %>"><%= i %></a></td>
+    <td><%= m.model_id %></td>
+    <td><%= m.criteria %></td>
+    <td><%= m.big %></td>
+    <td><%= m.reg %></td>
+    <td><%= m.roll %></td>
+    <td><a href="/formulas/<%= m.id %>">表示</a>
+        <a href="/formulas/<%= m.id %>/edit">変更</a></td>
+  </tr>
+  <% i=i+1 %>
+  <% end -%>
+</table>
+<%= button_to "新規作成", formulas_new_path ,method: :get %>

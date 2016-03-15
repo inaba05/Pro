@@ -1,0 +1,23 @@
+<h1>Formulas#new</h1>
+<p>Find me in app/views/formulas/new.html.erb</p>
+
+<div class="row">
+  <div class="col-md-6 col-md-offset-3">
+    <%= form_for(@formula) do |f| %>
+
+      <%= f.label :model_id %>
+      <%= f.text_field :model_id, class: 'form-control' %>
+      <%= f.label :criteria %>
+      <%= f.text_field :criteria, class: 'form-control' %>
+      <%= f.label :big %>
+      <%= f.text_field :big, class: 'form-control' %>
+      <%= f.label :reg %>
+      <%= f.text_field :reg, class: 'form-control' %>
+      <%= f.label :roll %>
+      <%= f.text_field :roll, class: 'form-control' %>
+
+      <%= f.submit "作成", class: "btn btn-primary" %>
+    <% end %>
+  </div>
+</div>
+<%= button_to "戻る", formulas_index_path ,method: :get %>

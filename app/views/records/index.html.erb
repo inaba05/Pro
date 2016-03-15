@@ -1,0 +1,41 @@
+<h1>Records#index</h1>
+<p>Find me in app/views/records/index.html.erb</p>
+<% day = Time.now.strftime("%Y-%m-%d") %>
+<%= form_tag('/records',:method => :get) do %>
+  <%= date_field 'sel_day','day',class: 'form-control' %>
+  <%= submit_tag '検索' %>
+<% end %>
+
+<table>
+  <tr>
+    <th width="20">No</th>
+    <th width="120">台番号</th>
+    <th width="100">日付</th>
+    <th width="50">Big</th>
+    <th width="50">Reg</th>
+    <th width="200">総回転数</th>
+    <th width="100">終了回転数</th>
+    <th width="50">辛口</th>
+    <th width="50">普通</th>
+    <th width="50">甘口</th>
+  </tr>
+  <% i = 1 %>
+  <% @record.each do |m| -%>
+  <tr>
+    <td><a href="/records/<%= m.id %>"><%= i %></a></td>
+    <td><%= m.machine_id %></td>
+    <td><%= m.date %></td>
+    <td><%= m.big %></td>
+    <td><%= m.reg %></td>
+    <td><%= m.roll %></td>
+    <td><%= m.final_roll %></td>
+    <td><%= m.dry %></td>
+    <td><%= m.result %></td>
+    <td><%= m.sweet %></td>
+    <td><a href="/records/<%= m.id %>">表示</a>
+        <a href="/records/<%= m.id %>/edit">変更</a></td>
+  </tr>
+  <% i=i+1 %>
+  <% end -%>
+</table>
+<%= button_to "新規作成", records_new_path ,method: :get %>

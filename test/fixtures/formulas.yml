@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  model_id: 1
+  criteria: 1
+  big: 1
+  reg: 1
+  roll: 1
+
+two:
+  model_id: 1
+  criteria: 1
+  big: 1
+  reg: 1
+  roll: 1

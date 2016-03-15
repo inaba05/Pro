@@ -1,0 +1,15 @@
+<h1>Machines#show</h1>
+<p>Find me in app/views/machines/show.html.erb</p>
+
+<div class="row">
+  <aside class="col-md-4">
+    <section class="user_info">
+      <h3>台番号:<%= @machine.number %></h3>
+      <h3>機種名:<%= @machine.model_id %></h3>
+      <h3>対象期間開始:<%= @machine.from %></h3>
+      <h3>対象期間終了:<%= @machine.to %></h3>
+    </section>
+  </aside>
+</div>
+
+<%= button_to "戻る", machines_index_path ,method: :get %>

@@ -1,0 +1,24 @@
+<h1>Models#index</h1>
+
+<table>
+  <tr>
+    <th width="20">No</th>
+    <th width="120">機種名</th>
+    <th width="200">作成日時</th>
+    <th width="200">更新日時</th>
+    <th width="100">処理</th>
+  </tr>
+  <% i = 1 %>
+  <% @model.each do |m| -%>
+  <tr>
+    <td><a href="/models/<%= m.id %>"><%= i %></a></td>
+    <td><%= m.name %></td>
+    <td><%= m.created_at %></td>
+    <td><%= m.updated_at %></td>
+    <td><a href="/models/<%= m.id %>">表示</a>
+        <a href="/models/<%= m.id %>/edit">変更</a></td>
+  </tr>
+  <% i=i+1 %>
+  <% end -%>
+</table>
+<%= button_to "新規作成", models_new_path ,method: :get %>

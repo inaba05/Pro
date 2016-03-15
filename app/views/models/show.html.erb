@@ -1,0 +1,13 @@
+<h1>Models#show</h1>
+
+<div class="row">
+  <aside class="col-md-4">
+    <section class="user_info">
+      <h3>ID:<%= @model.id %></h3>
+      <h3>機種名:<%= @model.name %></h3>
+      <h3>作成日時:<%= @model.created_at %></h3>
+      <h3>更新日時:<%= @model.updated_at %></h3>
+    </section>
+  </aside>
+</div>
+<%= button_to "戻る", models_index_path ,method: :get %>
