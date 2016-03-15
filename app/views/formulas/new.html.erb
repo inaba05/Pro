@@ -4,18 +4,21 @@
 <div class="row">
   <div class="col-md-6 col-md-offset-3">
     <%= form_for(@formula) do |f| %>
-
-      <%= f.label :model_id %>
-      <%= f.text_field :model_id, class: 'form-control' %>
-      <%= f.label :criteria %>
-      <%= f.text_field :criteria, class: 'form-control' %>
-      <%= f.label :big %>
+      <%= f.label "機種" %>
+      <%= f.collection_select :model_id, Model.all, :id, :name,:prompt => "選択してください" %>
+      <br>
+      <%= f.label "基準" %>
+      <%= f.select :criteria, {"辛口"=>"1","普通"=> "2", "甘口" => "3"},:prompt => "選択してください" %>
+      <br>
+      <%= f.label "Big枚数" %>
       <%= f.text_field :big, class: 'form-control' %>
-      <%= f.label :reg %>
+      <br>
+      <%= f.label "Reg枚数" %>
       <%= f.text_field :reg, class: 'form-control' %>
-      <%= f.label :roll %>
+      <br>
+      <%= f.label "回転数" %>
       <%= f.text_field :roll, class: 'form-control' %>
-
+      <br>
       <%= f.submit "作成", class: "btn btn-primary" %>
     <% end %>
   </div>

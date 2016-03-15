@@ -4,7 +4,7 @@
   <div class="col-md-6 col-md-offset-3">
     <%= form_for(@record) do |f| %>
       <%= f.label :machine_id %>
-      <%= f.text_field :machine_id, class: 'form-control' %>
+      <%= f.collection_select :machine_id, Machine.all, :id, :number,:prompt => "選択してください" %>
       <br>
       <%= f.label :date %>
       <%= f.date_field :date, class: 'form-control' %>
